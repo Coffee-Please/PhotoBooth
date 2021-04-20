@@ -8,7 +8,7 @@ import { Route, Switch, BrowserRouter as Router, Redirect } from "react-router-d
 
 import SignUp from "./pages/signup";
 import LogIn from "./pages/login";
-import Profile from "./pages/profile";
+import Title from "./components/Title";
 import ProfileRedirect from './router/profileRedirect';
 import PrivateRoute from './router/privateRoute';
 
@@ -22,8 +22,8 @@ function App() {
           <Switch>
             <ProfileRedirect exact path="/signup" component={SignUp} />
             <ProfileRedirect exact path="/login" component={LogIn} />
-            <PrivateRoute exact path="/profile/:id" component={Profile} />
-            <Route exact path="/"><Redirect to="/login"/></Route>   
+            <PrivateRoute exact path="/profile/:id" component={Title} />
+            <Route exact path="/"><Redirect to="/login"/></Route>
           </Switch>
         </div>
         <Footer></Footer>
@@ -33,6 +33,3 @@ function App() {
 }
 
 export default App;
-
-
-

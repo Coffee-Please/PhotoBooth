@@ -81,7 +81,7 @@ function Signup(props) {
             <div className="required field">
               <label>Password</label>
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="Password"
                 ref={register}
@@ -104,5 +104,3 @@ function Signup(props) {
 }
 
 export default Signup;
-
-

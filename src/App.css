@@ -42,7 +42,7 @@ header h2 {
   margin-top: 100px;
   margin : 100px auto 0 auto;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
 }
 
@@ -90,15 +90,20 @@ header h2 {
   margin-bottom: 0px;
 }
 
-.tittle{
+.title{
   margin: 150px auto 40px auto;
   text-align: center;
 }
+
+.centerBody {
+  text-align: center;
+}
+
 div input {
   border-top: hidden;
   border-right: hidden;
   border-left: hidden;
-  
+
 }
 .logo{
   float: center;
