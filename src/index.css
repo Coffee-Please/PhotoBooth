@@ -40,18 +40,18 @@ code {
 
 
 /* file uplaod button */
-form{
+.uploadForm {
   margin: 30px auto 10px;
   text-align: center;
 }
 
-label input{
+.upload input{
   height: 0;
   width: 0;
   opacity: 0;
 }
 
-label{
+.upload {
   display: block;
   width: 30px;
   height: 30px;
@@ -64,7 +64,7 @@ label{
   font-size: 24px;
 }
 
-label:hover{
+.upload:hover{
   background: var(--primary);
   color: white;
 }

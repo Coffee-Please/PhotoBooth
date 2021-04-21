@@ -28,9 +28,9 @@ const UploadForm = () => {
 
   return (
 // Select file form
-    <form>
+    <form className="uploadForm">
       {/* get input for file upload */}
-      <label>
+      <label className="upload">
         <input type="file" onChange={changeHandler} />
         <span>+</span>
       </label>
