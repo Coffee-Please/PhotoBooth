@@ -30,7 +30,10 @@ const UploadForm = () => {
 // Select file form
     <form>
       {/* get input for file upload */}
-      <input type="file" onChange={changeHandler} />
+      <label>
+        <input type="file" onChange={changeHandler} />
+        <span>+</span>
+      </label>
 
       {/* display the output to the client */}
       <div className="output">
