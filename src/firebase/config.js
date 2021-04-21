@@ -16,10 +16,12 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
-console.log(firebase.app().options);
-
 //anytime we want to interact with firebase storage and database we need to invoke these
 const photoBoothStorage = firebase.storage();
 const photoBoothFirestore = firebase.firestore();
 
-export {photoBoothStorage , photoBoothFirestore };
+// timestamp for when images are uploaded
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+
+// exports
+export { photoBoothStorage , photoBoothFirestore, timestamp };

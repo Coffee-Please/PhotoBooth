@@ -93,6 +93,7 @@ header h2 {
 .title{
   margin: 150px auto 40px auto;
   text-align: center;
+  width: 100%;
 }
 
 .centerBody {
