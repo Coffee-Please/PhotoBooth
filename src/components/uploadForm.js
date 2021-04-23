@@ -44,7 +44,7 @@ const UploadForm = () => {
         { file && <div>{ file.name }</div> }
 
         {/* check for file && if file output progress bar */}
-        { file && <ProgressBar file={file} setFile={setFile}/> }
+        { file && <ProgressBar file={file} setFile={setFile} /> }
 
       </div>
     </form>

@@ -10,7 +10,6 @@ const ImageGrid = ({ setSelectedImage }) => {
   // hooks
   const { user } = useSession(); // get the user info
   const { docs } = useFirestore(`${user.uid}`); // get the collection
-  console.log(docs);
 
   return (
     // image grid

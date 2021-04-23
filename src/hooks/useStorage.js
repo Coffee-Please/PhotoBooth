@@ -16,7 +16,7 @@ const useStorage = (file) => {
   useEffect(() => {
     // references
     const storageRef = photoBoothStorage.ref(file.name); // create reference to file
-    const collectionRef = photoBoothFirestore.collection(`${user.uid}`); // create reference to user's collection in firestore
+    const collectionRef = photoBoothFirestore.collection(`${user.uid}`).doc("album2"); // create reference to user's collection in firestore
 
     // upload file to the reference when state of reference changes
     storageRef.put(file).on('state_changed', (snap) => {
@@ -33,7 +33,7 @@ const useStorage = (file) => {
       const createdAt = timestamp(); // get the timestamp of when the image is uploaded
       const uploadedBy = user.displayName; // get the name of the user who is uploading the
 
-      collectionRef.add({ url, createdAt, uploadedBy }) // create or add image info to the firestore collection
+      collectionRef.set({ url, createdAt, uploadedBy }) // create or add image info to the firestore collection
       setUrl(url); // set the url downloaded
     })
   }, [file]); // set file as a required dependency
