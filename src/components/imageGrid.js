@@ -2,11 +2,14 @@
 import React from 'react';
 import useFirestore from './../hooks/useFirestore';
 import { motion } from 'framer-motion';
+import { useSession } from "../firebase/userProvider";
+
 
 // function to display images
 const ImageGrid = ({ setSelectedImage }) => {
-  // variables
-  const { docs } = useFirestore('images');
+  // hooks
+  const { user } = useSession(); // get the user info
+  const { docs } = useFirestore(`${user.uid}`); // get the collection
   console.log(docs);
 
   return (
