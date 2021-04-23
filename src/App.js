@@ -17,7 +17,7 @@ function App() {
     <UserProvider>
       <Router>
         <Header></Header>
-        <div className="ui grid container">
+        <div >
           {/* like switch will look for the route is match and if not match switch to other route*/}
           <Switch>
             <ProfileRedirect exact path="/signup" component={SignUp} />

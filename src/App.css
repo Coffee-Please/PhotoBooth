@@ -90,10 +90,18 @@ header h2 {
   margin-bottom: 0px;
 }
 
-.title{
-  margin: 150px auto 40px auto;
+.title {
+  margin: 129px 10px 40px 25px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 10px;
   text-align: center;
   width: 100%;
+  padding: 10px;
 }
 
 .centerBody {
