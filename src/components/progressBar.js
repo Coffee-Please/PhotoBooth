@@ -17,10 +17,10 @@ useEffect(() => {
     // show the user the album
     setSelectedAlbum(selectedAlbum);
 
-    // clear album name if it was being created
+    // clear album name and input if it was being created
     if (setAlbumName) {
-      setAlbumName(null);
       document.getElementById("album-name").value = '';
+      setAlbumName(null);
     }
   }
 }, [url, setFile])
