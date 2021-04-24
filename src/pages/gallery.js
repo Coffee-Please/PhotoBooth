@@ -1,15 +1,15 @@
 // imports
 import React, { useState } from 'react';
-import UploadForm from './uploadForm';
-import ImageGrid from './imageGrid';
-import Modal from './modal';
-import AlbumList from './albumList';
-import CreateAlbumForm from './createAlbumForm';
+import UploadForm from './../components/uploadForm';
+import ImageGrid from './../components/imageGrid';
+import Modal from './../components/modal';
+import AlbumList from './../components/albumList';
+import CreateAlbumForm from './../components/createAlbumForm';
 
 
 
 // function to display the gallery page
-const Title = () => {
+const Gallery = () => {
   // hooks
   const [selectedImage, setSelectedImage] = useState(null); // get the selected image
   const [selectedAlbum, setSelectedAlbum] = useState("All Images"); // get the selected album and initialize with default folder
@@ -38,4 +38,4 @@ const Title = () => {
 }
 
 // exports
-export default Title;
+export default Gallery;
