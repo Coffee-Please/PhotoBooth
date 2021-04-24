@@ -23,7 +23,7 @@ const Title = () => {
         </div>
 
         <div className="title">
-            <h1>Album Name</h1>
+            {selectedAlbum && <h1>{selectedAlbum}</h1>}
 
             <UploadForm selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
 
