@@ -4,29 +4,25 @@ import { photoBoothFirestore } from './../firebase/config';
 import { useSession } from "./../firebase/userProvider";
 
 // function to retrieve the images from firestore
-const useFirestore = (collection) => {
+const GetAlbums = (collection) => {
   // hooks
-  const [docs, setDocs] = useState([]); // to store images
+  const [albums, setAlbums] = useState([]); // to store images
   const { user } = useSession(); // get the user info
 
   // listen for documents within the collection
   useEffect(() => {
-    const unsub = photoBoothFirestore.collection(collection) // access images collection from firestore
-    // retrieval order is in descending order by createdAt value
-    .orderBy('createdAt', 'desc')
+    const unsub = photoBoothFirestore.collection(collection) // access documents in collection from firestore
     // callback function captures snapshot of the database, whenever there is a change in the collection
     .onSnapshot((snap) => {
         let documents = []; // create array to hold the documents
 
         // for each document in the firestore collection
         snap.forEach( doc => {
-          documents.push({...doc.data(), id: doc.id}) // get the data and id
+          documents.push({...doc.data()}) // get the data and id
         });
 
         // update the documents
-        setDocs(documents);
-        console.log("FSdoc", documents);
-
+        setAlbums(documents);
     });
 
     // clean up: unsubscribe from the collection once we are done
@@ -34,7 +30,7 @@ const useFirestore = (collection) => {
   }, [collection])
 
 
-  return { docs };
+  return { albums };
 }
 
-export default useFirestore;
+export default GetAlbums;

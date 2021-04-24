@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ProgressBar from './progressBar';
 
 // React function to upload a file
-const UploadForm = () => {
+const UploadForm = ({ selectedAlbum, setSelectedAlbum }) => {
 
 // Hooks
   const [file, setFile] = useState(null); // hook to store the selected file
@@ -15,7 +15,7 @@ const UploadForm = () => {
 // Functions
   const changeHandler = (event) => {
     let selected = event.target.files[0]; // select only the first file
-
+console.log("in change handleClick", selectedAlbum);
     // if there is a file and it is and allowed file format
     if (selected && types.includes(selected.type)) {
       setFile(selected); // set the selected file
@@ -44,7 +44,7 @@ const UploadForm = () => {
         { file && <div>{ file.name }</div> }
 
         {/* check for file && if file output progress bar */}
-        { file && <ProgressBar file={file} setFile={setFile} /> }
+        { file && <ProgressBar file={file} setFile={setFile} selectedAlbum={selectedAlbum} /> }
 
       </div>
     </form>

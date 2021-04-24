@@ -5,12 +5,13 @@ import { motion } from 'framer-motion';
 
 
 // function that returns a progress bar
-const ProgressBar = ({ file, setFile }) => {
+const ProgressBar = ({ file, setFile, selectedAlbum }) => {
 // Variables
-const { url, progress } = useStorage(file); // upload file to album and get url and progress of upload
+const { url, progress } = useStorage(file, selectedAlbum); // upload file to album and get url and progress of upload
   console.log(progress, url);
 useEffect(() => {
   if(url) {
+    // clear the file
     setFile(null);
   }
 }, [url, setFile])

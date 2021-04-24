@@ -4,7 +4,7 @@ import UploadForm from './uploadForm';
 import ImageGrid from './imageGrid';
 import Modal from './modal';
 import AlbumList from './albumList';
-import CreateAlbum from './createAlbum';
+import CreateAlbumForm from './createAlbumForm';
 
 
 
@@ -12,15 +12,18 @@ import CreateAlbum from './createAlbum';
 const Title = () => {
   // hooks
   const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedAlbum, setSelectedAlbum] = useState(null);
+  const [selectedAlbum, setSelectedAlbum] = useState("All Images");
+  const [albumList, setAlbumList] = useState([ "All Images" ]);
 
+  console.log("selectedAlbum", selectedAlbum);
+  console.log("albumList: ", albumList);
 
   return (
     <>
 <div className="gallery">
   <div className="list">
-    <AlbumList selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
-    <CreateAlbum />
+    <AlbumList setSelectedAlbum={setSelectedAlbum} setAlbumList={setAlbumList} />
+    <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} selectedAlbum={selectedAlbum} />
   </div>
 
   <div className="title">
@@ -28,7 +31,7 @@ const Title = () => {
 
       <UploadForm />
 
-      <ImageGrid setSelectedImage={setSelectedImage}/>
+      <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
 
       {selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
   </div>
