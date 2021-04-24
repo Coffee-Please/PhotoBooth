@@ -17,10 +17,8 @@ const useStorage = (file, selectedAlbum) => {
   useEffect(() => {
     // references
     const storageRef = photoBoothStorage.ref(file.name); // create reference to file
-    console.log("user", user.uid);
-
     const collectionRef = photoBoothFirestore.collection(`${user.uid}`); // create reference to user's collection in firestore
-console.log("stroe: ", selectedAlbum);
+
     // upload file to the reference when state of reference changes
     storageRef.put(file).on('state_changed', (snap) => {
       let percentage = (snap.bytesTransferred / snap.totalBytes) * 100; // percentage of the upload (progress)
@@ -36,6 +34,7 @@ console.log("stroe: ", selectedAlbum);
       const createdAt = timestamp(); // get the timestamp of when the image is uploaded
       const uploadedBy = user.displayName; // get the name of the user who is uploading the
       var album = "";
+
       // check if there is an album
       if (selectedAlbum == undefined) {
         album = null;
@@ -43,6 +42,7 @@ console.log("stroe: ", selectedAlbum);
       else {
         album = selectedAlbum;
       }
+      console.log("useStorage: ", selectedAlbum);
 
       // if there is and image, add
       collectionRef.add({ url, album, createdAt, uploadedBy }); // create or add image info to the firestore collection

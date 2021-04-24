@@ -29,7 +29,7 @@ const Title = () => {
   <div className="title">
       <h1>Album Name</h1>
 
-      <UploadForm />
+      <UploadForm selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
 
       <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
 
