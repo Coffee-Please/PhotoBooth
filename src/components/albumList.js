@@ -7,7 +7,7 @@ const AlbumList = ({ setSelectedAlbum }) => {
   // hooks
   const { user } = useSession(); // get the user info
   var { docs } = useFirestore(`${user.uid}`); // get the collection
-  const arr = ["All Images"]; // to hold the list of unique album names
+  const albumsList = ["All Images"]; // to hold the list of unique album names
 
 
 // on click of album name, set it as the selected album
@@ -18,8 +18,8 @@ const AlbumList = ({ setSelectedAlbum }) => {
 // function to list the album names
 const listHandle = (docs) => {
   // check if the album is already listed and is not empty
-  if(!(arr.includes(docs.album)) && docs.album != null) {
-    arr.push(docs.album); // if not, create it and push to list
+  if(!(albumsList.includes(docs.album)) && docs.album != null) {
+    albumsList.push(docs.album); // if not, create it and push to list
 
     // display album name
     return (

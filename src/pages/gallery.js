@@ -7,7 +7,6 @@ import AlbumList from './../components/albumList';
 import CreateAlbumForm from './../components/createAlbumForm';
 
 
-
 // function to display the gallery page
 const Gallery = () => {
   // hooks
