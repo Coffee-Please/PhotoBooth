@@ -12,7 +12,7 @@ import CreateAlbumForm from './createAlbumForm';
 const Title = () => {
   // hooks
   const [selectedImage, setSelectedImage] = useState(null); // get the selected image
-  const [selectedAlbum, setSelectedAlbum] = useState("All Images"); // get the selected album
+  const [selectedAlbum, setSelectedAlbum] = useState("All Images"); // get the selected album and initialize with default folder
 
   return (
     <>

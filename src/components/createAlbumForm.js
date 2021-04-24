@@ -18,8 +18,8 @@ const CreateAlbumForm = () => {
   return (
     <>
       {/* get input for file upload */}
-      <input type="text" placeholder="Enter a album name..." onChange={handleChange}/>
-      { albumName && <UploadForm selectedAlbum={albumName} setSelectedAlbum={setAlbumName} /> }
+      <input type="text" id="album-name" placeholder="Start typing to add a album..." onChange={handleChange}/>
+      { albumName && <UploadForm selectedAlbum={albumName} setSelectedAlbum={setAlbumName} setAlbumName={setAlbumName} /> }
     </>
   )
 }
