@@ -1,13 +1,11 @@
 // imports
 import { useState, useEffect } from 'react';
 import { photoBoothFirestore } from './../firebase/config';
-import { useSession } from "./../firebase/userProvider";
 
 // function to retrieve the images from firestore
 const useFirestore = (collection) => {
   // hooks
   const [docs, setDocs] = useState([]); // to store images
-  const { user } = useSession(); // get the user info
 
   // listen for documents within the collection
   useEffect(() => {
@@ -25,8 +23,6 @@ const useFirestore = (collection) => {
 
         // update the documents
         setDocs(documents);
-        console.log("FSdoc", documents);
-
     });
 
     // clean up: unsubscribe from the collection once we are done

@@ -15,7 +15,7 @@ const UploadForm = ({ selectedAlbum, setSelectedAlbum }) => {
 // Functions
   const changeHandler = (event) => {
     let selected = event.target.files[0]; // select only the first file
-console.log("in change handleClick", selectedAlbum);
+
     // if there is a file and it is and allowed file format
     if (selected && types.includes(selected.type)) {
       setFile(selected); // set the selected file

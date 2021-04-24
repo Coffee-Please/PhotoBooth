@@ -1,6 +1,4 @@
-import React, { useRef, useState } from 'react';
-import { photoBoothStorage, photoBoothFirestore, timestamp } from '../firebase/config';
-import { useSession } from "./../firebase/userProvider";
+import React, { useState } from 'react';
 import UploadForm from './uploadForm';
 
 const CreateAlbumForm = () => {
@@ -12,13 +10,10 @@ const CreateAlbumForm = () => {
   // Functions
   const handleChange = ({ target }) => {
     setAlbumName(target.value);
-    console.log("seyAlb: ", albumName);
+
+    // TODO: check if album already exists
+
   };
-
-  // TODO: check if album exists
-  const createAlbum = () => {
-
-  }
 
   return (
     <>

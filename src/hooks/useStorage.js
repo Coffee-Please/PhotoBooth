@@ -48,7 +48,7 @@ const useStorage = (file, selectedAlbum) => {
       collectionRef.add({ url, album, createdAt, uploadedBy }); // create or add image info to the firestore collection
       setUrl(url); // set the url downloaded
     })
-  }, [file]); // set file as a required dependency
+  }, [file, selectedAlbum]); // set file and album as a required dependency
 
 // return values
   return { progress, url, error }

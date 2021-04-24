@@ -11,33 +11,28 @@ import CreateAlbumForm from './createAlbumForm';
 // function to display the gallery page
 const Title = () => {
   // hooks
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedAlbum, setSelectedAlbum] = useState("All Images");
-  const [albumList, setAlbumList] = useState([ "All Images" ]);
-
-  console.log("selectedAlbum", selectedAlbum);
-  console.log("albumList: ", albumList);
+  const [selectedImage, setSelectedImage] = useState(null); // get the selected image
+  const [selectedAlbum, setSelectedAlbum] = useState("All Images"); // get the selected album
 
   return (
     <>
-<div className="gallery">
-  <div className="list">
-    <AlbumList setSelectedAlbum={setSelectedAlbum} setAlbumList={setAlbumList} />
-    <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} selectedAlbum={selectedAlbum} />
-  </div>
+      <div className="gallery">
+        <div className="list">
+          <AlbumList setSelectedAlbum={setSelectedAlbum} />
+          <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} selectedAlbum={selectedAlbum} />
+        </div>
 
-  <div className="title">
-      <h1>Album Name</h1>
+        <div className="title">
+            <h1>Album Name</h1>
 
-      <UploadForm selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
+            <UploadForm selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
 
-      <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
+            <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
 
-      {selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
-  </div>
+            {selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
+        </div>
 
-</div>
-
+      </div>
     </>
   )
 }

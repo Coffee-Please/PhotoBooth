@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useFirestore from './../hooks/useFirestore';
-import GetAlbums from './../hooks/getAlbums';
-
 import { useSession } from "./../firebase/userProvider";
 
 
-const AlbumList = ({ setSelectedAlbum, setAlbumList }) => {
+const AlbumList = ({ setSelectedAlbum }) => {
   // hooks
   const { user } = useSession(); // get the user info
   var { docs } = useFirestore(`${user.uid}`); // get the collection
-
-  const { albums } = GetAlbums(`${user.uid}`);
   const arr = ["All Images"]; // to hold the list of unique album names
-console.log("arr", arr);
-console.log("albums docs AL: ", albums);
 
-  // {/* TODO: onclick, get the images tagged by the album selected */}
+
 // on click of album name, set it as the selected album
   const handleClick = (event) => {
       setSelectedAlbum(event.target.innerText);
-      console.log("CLICKED: ", event.target.innerText);
   }
 
 // function to list the album names
