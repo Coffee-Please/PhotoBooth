@@ -19,7 +19,7 @@ const Title = () => {
       <div className="gallery">
         <div className="list">
           <AlbumList setSelectedAlbum={setSelectedAlbum} />
-          <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} selectedAlbum={selectedAlbum} />
+          <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} />
         </div>
 
         <div className="title">
