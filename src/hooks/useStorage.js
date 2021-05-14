@@ -11,7 +11,6 @@ const useStorage = (file, selectedAlbum) => {
   const [error, setError] = useState(null); // errors of the upload
   const [url, setUrl] = useState(null); // image url from storage after the upload
   const { user } = useSession(); // get the user info
-  console.log("useStorage:", selectedAlbum);
 
 
   useEffect(() => {
@@ -42,7 +41,6 @@ const useStorage = (file, selectedAlbum) => {
       else {
         album = selectedAlbum;
       }
-      console.log("useStorage: ", selectedAlbum);
 
       // if there is and image, add
       collectionRef.add({ url, album, createdAt, uploadedBy }); // create or add image info to the firestore collection

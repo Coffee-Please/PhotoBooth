@@ -141,6 +141,14 @@ code {
   margin: 60px auto 40px auto;
 }
 
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px black;
+  height: fit-content;
+  padding: 15px;
+}
+
 .album-header {
   border-bottom: solid 1px black;
   height: 50px;
@@ -148,10 +156,10 @@ code {
 }
 
 .album-wrapper {
-  border-bottom: solid 1px black;
-  height: 50px;
+  height: fit-content;
   padding: 15px;
 }
+
 
 /* add album button */
 
