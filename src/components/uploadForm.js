@@ -5,7 +5,8 @@ import ProgressBar from "./progressBar";
 // React function to upload a file
 const UploadForm = ({ selectedAlbum, setSelectedAlbum, setAlbumName }) => {
   // Hooks
-  const [file, setFile] = useState(null); // hook to store the selected file
+  const [file, setFile] = useState(null); // hook to store the uploaded file
+
   const [error, setError] = useState(null); // hook to store errors
 
   // Variables

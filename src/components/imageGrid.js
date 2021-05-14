@@ -20,7 +20,7 @@ const ImageGrid = ({ setSelectedImage, selectedAlbum }) => {
       // when the image is clicked, send it back to the modal
       return (
         <motion.div className="img-wrap" key={docs.id} layout whileHover={{ opacity: 1 }} onClick={() => setSelectedImage(docs.url)}>
-          <motion.img src={docs.url} alt="uploaded pic" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} />
+          <motion.img src={docs.url} alt="" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} />
         </motion.div>
       )
     }
@@ -30,7 +30,7 @@ const ImageGrid = ({ setSelectedImage, selectedAlbum }) => {
       // when the image is clicked, send it back to the modal
       return (
         <motion.div className="img-wrap" key={docs.id} layout whileHover={{ opacity: 1 }} onClick={() => setSelectedImage(docs.url)}>
-          <motion.img src={docs.url} alt="uploaded pic" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} />
+          <motion.img src={docs.url} alt="" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} />
         </motion.div>
       )
     }

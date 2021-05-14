@@ -10,9 +10,6 @@ const CreateAlbumForm = ({ setSelectedAlbum }) => {
   // Functions
   const handleChange = ({ target }) => {
     setAlbumName(target.value);
-
-    // TODO: check if album already exists, and user uploads and image using the form, it simply uploads to the existing album
-
   };
 
   return (

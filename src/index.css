@@ -147,18 +147,29 @@ code {
     -6px -6px 16px 0 rgba(255, 255, 255, 0.5);
 }
 
+.list-item {
+  border-bottom: solid 1px black;
+  height: fit-content;
+}
+
+#delete-btn {
+  margin: 5px;
+}
+
 .album-header {
-  border-bottom: solid 0.5px black;
-  height: 50px;
+  border-bottom: solid 1px black;
+  height: fit-content;
+
   padding: 15px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
 
 .album-wrapper {
-  /* border-bottom: solid 1px black; */
+  cursor: pointer;
+  height: fit-content;
+  width: -webkit-fill-available;
 
-  height: 50px;
   padding: 15px;
   background-color: #ff8474;
   border-radius: 15px;

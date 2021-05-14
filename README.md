@@ -12,3 +12,4 @@ In addition, users will have the option to create albums and save similar photos
 - Firebase
 - OAuth
 - Styled Components (Styling Library for React)
+- Framer Motion
