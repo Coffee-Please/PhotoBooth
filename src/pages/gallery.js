@@ -1,11 +1,10 @@
 // imports
-import React, { useState } from 'react';
-import UploadForm from './../components/uploadForm';
-import ImageGrid from './../components/imageGrid';
-import Modal from './../components/modal';
-import AlbumList from './../components/albumList';
-import CreateAlbumForm from './../components/createAlbumForm';
-
+import React, { useState } from "react";
+import UploadForm from "./../components/uploadForm";
+import ImageGrid from "./../components/imageGrid";
+import Modal from "./../components/modal";
+import AlbumList from "./../components/albumList";
+import CreateAlbumForm from "./../components/createAlbumForm";
 
 // function to display the gallery page
 const Gallery = () => {
@@ -16,26 +15,38 @@ const Gallery = () => {
   return (
     <>
       <div className="gallery">
-
-        <div className="list">
-          <AlbumList selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
+        <div className="list album-list">
+          <AlbumList
+            selectedAlbum={selectedAlbum}
+            setSelectedAlbum={setSelectedAlbum}
+          />
           <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} />
         </div>
 
         <div className="title">
-            {selectedAlbum && <h1>{selectedAlbum}</h1>}
+          {selectedAlbum && <h1>{selectedAlbum}</h1>}
 
-            <UploadForm selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
+          <UploadForm
+            selectedAlbum={selectedAlbum}
+            setSelectedAlbum={setSelectedAlbum}
+          />
 
-            <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
+          <ImageGrid
+            setSelectedImage={setSelectedImage}
+            selectedAlbum={selectedAlbum}
+          />
 
-            {selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
+          {selectedImage && (
+            <Modal
+              selectedImage={selectedImage}
+              setSelectedImage={setSelectedImage}
+            />
+          )}
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 
 // exports
 export default Gallery;

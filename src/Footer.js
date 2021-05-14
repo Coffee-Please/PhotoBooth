@@ -5,23 +5,42 @@ import {
   faFacebook,
   faTwitter,
   faInstagram,
+  faReact,
+  faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
     <footer>
       <div>
-        <a href="#" className="facebook social">
-          <FontAwesomeIcon icon={faFacebook} size="2x" />
-        </a>
-        <a href="#" className="twitter social">
-          <FontAwesomeIcon icon={faTwitter} size="2x" />
-        </a>
-        <a href="#" className="instagram social">
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+        <a
+          href="https://reactjs.org/docs/getting-started.html"
+          target="_blank"
+          rel="noreferrer"
+          className="facebook social"
+        >
+          <FontAwesomeIcon icon={faReact} size="2x" />
         </a>
         <a
-          href="https://www.youtube.com/c/jamesqquick"
+          href="https://twitter.com/firebase"
+          className="twitter social"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon icon={faTwitter} size="2x" />
+        </a>
+        <a
+          href="https://firebase.google.com/docs"
+          className="instagram social"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon icon={faGoogle} size="2x" />
+        </a>
+        <a
+          href="https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+          target="_blank"
+          rel="noreferrer"
           className="youtube social"
         >
           <FontAwesomeIcon icon={faYoutube} size="2x" />

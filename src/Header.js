@@ -16,6 +16,7 @@ function Header() {
   return (
     <header>
       <h2>PhotoBooth</h2>
+
       {/* render button only if logged in to page */}
 
       {!!user && (
@@ -27,4 +28,3 @@ function Header() {
   );
 }
 export default Header;
-
