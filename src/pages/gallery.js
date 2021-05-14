@@ -16,6 +16,7 @@ const Gallery = () => {
   return (
     <>
       <div className="gallery">
+
         <div className="list">
           <AlbumList selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
           <CreateAlbumForm setSelectedAlbum={setSelectedAlbum} />

@@ -142,21 +142,24 @@ code {
 }
 
 .list-item {
-  display: flex;
-  justify-content: space-between;
   border-bottom: solid 1px black;
   height: fit-content;
-  padding: 15px;
+}
+
+#delete-btn {
+  margin: 5px;
 }
 
 .album-header {
   border-bottom: solid 1px black;
-  height: 50px;
+  height: fit-content;
   padding: 15px;
 }
 
 .album-wrapper {
+  cursor: pointer;
   height: fit-content;
+  width: -webkit-fill-available;
   padding: 15px;
 }
 
