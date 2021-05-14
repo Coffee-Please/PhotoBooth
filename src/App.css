@@ -1,9 +1,9 @@
 body {
   background-color: #f9f9f9 !important;
   font-size: 15px;
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: "Titillium Web", sans-serif !important;
 }
-footer{
+footer {
   margin-top: 50px;
   text-align: center;
 }
@@ -14,7 +14,7 @@ a {
 .ui.button,
 .ui.input,
 .ui.form input {
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: "Titillium Web", sans-serif !important;
 }
 
 header {
@@ -40,7 +40,7 @@ header h2 {
 
 .login-container {
   margin-top: 100px;
-  margin : 100px auto 0 auto;
+  margin: 100px auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,8 +51,8 @@ header h2 {
   /* text-align: center; */
 }
 
-.ui.form input[type='text'],
-.ui.form input[type='password'],
+.ui.form input[type="text"],
+.ui.form input[type="password"],
 .ui.form select {
   margin-top: 10px;
 }
@@ -86,12 +86,12 @@ header h2 {
   float: right;
   margin-top: 20px;
 }
-.text-container{
+.text-container {
   margin-bottom: 0px;
 }
 
 .title {
-  margin: 129px 10px 40px 25px;
+  margin: 60px 10px 40px 25px;
   text-align: center;
 }
 
@@ -112,9 +112,8 @@ div input {
   border-top: hidden;
   border-right: hidden;
   border-left: hidden;
-
 }
-.logo{
+.logo {
   float: center;
   height: 150px;
   width: 150px;

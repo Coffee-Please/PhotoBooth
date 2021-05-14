@@ -5,39 +5,38 @@
 }
 
 body {
-  margin: 10px 0 0 0 ;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin: 10px 0 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.App{
+.App {
   max-width: 960px;
   margin: 0 auto;
 }
 
-.title h1{
+.title h1 {
   color: var(--primary);
   font-size: 2.5rem;
   letter-spacing: 2px;
   font-weight: normal;
 }
-.title h2, .title p{
+.title h2,
+.title p {
   text-align: center;
 }
-.title h2{
+.title h2 {
   margin-top: 60px;
   font-size: 2.6rem;
 }
-
-
 
 /* file uplaod button */
 .uploadForm {
@@ -45,7 +44,7 @@ code {
   text-align: center;
 }
 
-.upload input{
+.upload input {
   height: 0;
   width: 0;
   opacity: 0;
@@ -64,16 +63,16 @@ code {
   font-size: 24px;
 }
 
-.upload:hover{
+.upload:hover {
   background: var(--primary);
   color: white;
 }
 
-.output{
+.output {
   height: 60px;
   font-size: 0.8rem;
 }
-.error{
+.error {
   color: var(--error);
 }
 
@@ -90,7 +89,7 @@ code {
 .img-grid {
   margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
 }
 
@@ -139,19 +138,56 @@ code {
   height: 100%;
   width: 100%;
   margin: 60px auto 40px auto;
+  background-color: white;
+  /* border: #1a2129;
+  border-style: solid; */
+  border-radius: 25px;
+
+  box-shadow: 6px 6px 16px 0 rgba(190, 190, 190, 0.6),
+    -6px -6px 16px 0 rgba(255, 255, 255, 0.5);
 }
 
 .album-header {
-  border-bottom: solid 1px black;
+  border-bottom: solid 0.5px black;
   height: 50px;
   padding: 15px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 .album-wrapper {
-  border-bottom: solid 1px black;
+  /* border-bottom: solid 1px black; */
+
   height: 50px;
   padding: 15px;
+  background-color: #ff8474;
+  border-radius: 15px;
+  margin: 8px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
 }
+
+#album-name {
+  margin: 15px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border: #ff8474;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+}
+
+.album-wrapper:hover {
+  transform: scale(1.05);
+  background-color: #ffc996;
+}
+/* #ffc996
+#ff8474
+#9f5f80
+#583d72 */
 
 /* add album button */
 
@@ -169,7 +205,20 @@ code {
   color: var(--primary);
 }
 
-.create-album:hover{
+.create-album:hover {
   background: var(--primary);
   color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  margin: 10px;
+}
+
+.social {
+  margin: 0 10px;
 }
