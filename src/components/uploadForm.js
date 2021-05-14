@@ -36,7 +36,11 @@ const UploadForm = ({ selectedAlbum, setSelectedAlbum, setAlbumName }) => {
       </label> */}
 
       <label>
-        <input type="file" style={{ display: "none" }} />
+        <input
+          type="file"
+          style={{ display: "none" }}
+          onChange={changeHandler}
+        />
         <div
           className="album-wrapper"
           onChange={changeHandler}
