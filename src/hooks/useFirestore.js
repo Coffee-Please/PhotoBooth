@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { photoBoothFirestore } from './../firebase/config';
 
-// function to retrieve the images from firestore
+// function to retrieve the images (all documents) from firestore
 const useFirestore = (collection) => {
   // hooks
   const [docs, setDocs] = useState([]); // to store images

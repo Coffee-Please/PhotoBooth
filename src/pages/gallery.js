@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import UploadForm from './../components/uploadForm';
 import ImageGrid from './../components/imageGrid';
-import Modal from './../components/modal';
+import ImageModal from './../components/modal';
 import AlbumList from './../components/albumList';
 import CreateAlbumForm from './../components/createAlbumForm';
 
@@ -29,7 +29,7 @@ const Gallery = () => {
 
             <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
 
-            {selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
+            {selectedImage && <ImageModal selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
         </div>
 
       </div>
