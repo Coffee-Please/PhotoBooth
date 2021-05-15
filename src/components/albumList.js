@@ -29,7 +29,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
       return (
         <div className="list-item">
           {/* delete image button sows when the ablum is selected*/}
-          {selectedAlbum == docs.album && <button className="ui red basic left floated button" id="delete-btn" alt="Delete" onClick={() => { DeleteItem(field, userId, selectedAlbum, setSelectedAlbum) } }><CgTrash /></button>}
+          {selectedAlbum == docs.album && <button className="ui red basic left floated button" id="delete-btn" alt="Delete" onClick={() => { DeleteItem('delete', null, field, userId, selectedAlbum, setSelectedAlbum) } }><CgTrash /></button>}
 
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>
