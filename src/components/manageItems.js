@@ -53,7 +53,11 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
 
           // otherwise if the method is update
           if (method == 'update') {
-            setSelectedAlbum(albumName); // otherwise set album to All Images
+            if(albumName){
+              setSelectedAlbum(albumName); // otherwise set album to All Images
+            } else {
+              setSelectedAlbum("All Images");
+            }
           }
 
           setSelectedItem(null); // set the selected image to empty to close the modal
