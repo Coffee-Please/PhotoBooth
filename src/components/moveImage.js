@@ -1,7 +1,7 @@
 // imports
 import React, { setState, useState } from 'react';
 import { CgTrash } from 'react-icons/cg';
-import DeleteItem from './deleteItems';
+import ManageItems from './manageItems';
 import Modal from 'react-modal';
 import { useSession } from "./../firebase/userProvider";
 
@@ -46,7 +46,7 @@ const MoveImage = ({ method, field, userId, selectedImage, setSelectedImage }) =
   };
 
   const handleSubmit = () => {
-    DeleteItem(method, albumName, field, userId, selectedImage, setSelectedImage);
+    ManageItems(method, albumName, field, userId, selectedImage, setSelectedImage);
   }
 
   return (

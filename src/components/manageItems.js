@@ -3,7 +3,7 @@ import React from 'react';
 import { photoBoothFirestore } from './../firebase/config';
 
 // function to delete an image
-const DeleteItem = ( method, albumName, field, userId, selectedItem, setSelectedItem ) => {
+const ManageItems = ( method, albumName, field, userId, selectedItem, setSelectedItem ) => {
     // references
     const collectionRef = photoBoothFirestore.collection(`${userId}`); // create reference to user's collection in firestore
     const documents = collectionRef.where(field,'==', selectedItem); // set the query field to the field of the selected file
@@ -35,4 +35,4 @@ const DeleteItem = ( method, albumName, field, userId, selectedItem, setSelected
     });
 }
 
-export default DeleteItem;
+export default ManageItems;
