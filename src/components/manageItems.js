@@ -50,6 +50,12 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
               // Album is empty, redirect to All Images
               setSelectedAlbum("All Images");
           }
+
+          // otherwise if the method is update
+          if (method == 'update') {
+            setSelectedAlbum(albumName); // otherwise set album to All Images
+          }
+
           setSelectedItem(null); // set the selected image to empty to close the modal
         }
 

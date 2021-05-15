@@ -31,10 +31,10 @@ const ImageModal = ({ selectedAlbum, setSelectedAlbum, selectedImage, setSelecte
       <motion.img src={ selectedImage } alt="" initial={{ y: "-100vh" }} animate={{ y: 0 }} />
 
       {/* delete image button */}
-      <ConfirmDeleteModal method={'delete'} albumName={null} field={'url'} userId={userId} selectedItem={selectedImage} setSelectedItem={setSelectedImage} selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum}/>
+      <ConfirmDeleteModal method={'delete'} albumName={null} field={'url'} userId={userId} selectedItem={selectedImage} setSelectedItem={setSelectedImage} selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
 
       {/* change album modal */}
-      <MoveImageModal method={'update'} field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
+      <MoveImageModal method={'update'} field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />
 
     </motion.div>
   )

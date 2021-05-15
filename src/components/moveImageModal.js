@@ -17,7 +17,7 @@ const customStyles = {
 Modal.setAppElement('#root'); // for accessibility, prevents screen readers from reading background content
 
 // function that creates the modal
-const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage }) => {
+const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage, selectedAlbum, setSelectedAlbum }) => {
 
   const [albumName, setAlbumName] = useState(null);
   const [modalIsOpen,setIsOpen] = useState(false);
@@ -43,7 +43,7 @@ const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage
   };
 
   const handleSubmit = () => {
-    ManageItems(method, albumName, field, userId, selectedImage, setSelectedImage, null, null);
+    ManageItems(method, albumName, field, userId, selectedImage, setSelectedImage, selectedAlbum, setSelectedAlbum);
   }
 
   return (
