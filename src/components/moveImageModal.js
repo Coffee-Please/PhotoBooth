@@ -19,7 +19,7 @@ const customStyles = {
 Modal.setAppElement('#root'); // for accessibility, prevents screen readers from reading background content
 
 // function that creates the modal
-const MoveImage = ({ method, field, userId, selectedImage, setSelectedImage }) => {
+const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage }) => {
 
   const [albumName, setAlbumName] = useState(null);
   const [modalIsOpen,setIsOpen] = useState(false);
@@ -73,4 +73,4 @@ const MoveImage = ({ method, field, userId, selectedImage, setSelectedImage }) =
   )
 }
 
-export default MoveImage;
+export default MoveImageModal;

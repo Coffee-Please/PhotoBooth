@@ -7,14 +7,13 @@ import { photoBoothFirestore } from './../firebase/config';
 import ManageItems from './manageItems';
 import ConfirmDeleteModal from './confirmDeleteModal';
 import Modal from 'react-modal';
-import MoveImage from './moveImage';
+import MoveImageModal from './moveImageModal';
 
 
 // function that creates the modal
 const ImageModal = ({ selectedImage, setSelectedImage }) => {
   const { user } = useSession(); // get the user info
   const userId = user.uid; // set the user id for passing to delete method if needed
-  const field = 'url'; // set the field for the delete to url
 
   // function to close the modal
   const handleClick = (e) => {
@@ -24,7 +23,6 @@ const ImageModal = ({ selectedImage, setSelectedImage }) => {
     }
   }
 
-
   return (
     // modal
     <motion.div className="backdrop" onClick={handleClick} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -32,10 +30,10 @@ const ImageModal = ({ selectedImage, setSelectedImage }) => {
       <motion.img src={ selectedImage } alt="" initial={{ y: "-100vh" }} animate={{ y: 0 }}/>
 
       {/* delete image button */}
-      <ConfirmDeleteModal field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
+      <ConfirmDeleteModal method={'delete'} type={'image'} albumName={null} field={'url'} userId={userId} selectedItem={selectedImage} setSelectedItem={setSelectedImage}/>
 
       {/* change album modal */}
-      <MoveImage method={'update'} field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
+      <MoveImageModal method={'update'} field={'url'} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
 
     </motion.div>
   )

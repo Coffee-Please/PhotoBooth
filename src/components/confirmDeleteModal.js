@@ -19,7 +19,7 @@ const customStyles = {
 Modal.setAppElement('#root'); // for accessibility, prevents screen readers from reading background content
 
 // function that creates the modal
-const ConfirmDeleteModal = ({ field, userId, selectedImage, setSelectedImage }) => {
+const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedItem, setSelectedItem }) => {
   const [modalIsOpen,setIsOpen] = useState(false);
 
 
@@ -32,13 +32,13 @@ const ConfirmDeleteModal = ({ field, userId, selectedImage, setSelectedImage }) 
   }
 
   const handleSubmit = () => {
-    ManageItems('delete', null, field, userId, selectedImage, setSelectedImage);
+    ManageItems(method, albumName, field, userId, selectedItem, setSelectedItem);
   }
 
   return (
     // modal
     <>
-        <button className="ui red button" onClick={ openModal }><CgTrash /> Delete</button>
+        <button className="ui red button" alt="Delete" onClick={ openModal }><CgTrash /></button>
 
         <Modal
           isOpen={modalIsOpen}
@@ -47,12 +47,12 @@ const ConfirmDeleteModal = ({ field, userId, selectedImage, setSelectedImage }) 
           contentLabel="Delete Image"
         >
 
-          <h2>Delete Image</h2>
+          <h2>Delete</h2>
           <form>
-            <p>Are you sure you want to delete this item?</p>
+            <p>Are you sure you want to delete this {type}?</p>
           </form>
 
-          <button className="ui basic red button" onClick={closeModal}>Cancel</button>
+          <button className="ui basic button" onClick={closeModal}>Cancel</button>
           <button className="ui red button" onClick={handleSubmit}>Delete</button>
         </Modal>
         </>
