@@ -5,6 +5,7 @@ import { CgTrash } from 'react-icons/cg';
 import { useSession } from "./../firebase/userProvider";
 import { photoBoothFirestore } from './../firebase/config';
 import ManageItems from './manageItems';
+import ConfirmDeleteModal from './confirmDeleteModal';
 import Modal from 'react-modal';
 import MoveImage from './moveImage';
 
@@ -31,7 +32,7 @@ const ImageModal = ({ selectedImage, setSelectedImage }) => {
       <motion.img src={ selectedImage } alt="" initial={{ y: "-100vh" }} animate={{ y: 0 }}/>
 
       {/* delete image button */}
-      <button className="ui red button" onClick={() => { ManageItems('delete', null, field, userId, selectedImage, setSelectedImage) } }><CgTrash /> Delete</button>
+      <ConfirmDeleteModal field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
 
       {/* change album modal */}
       <MoveImage method={'update'} field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
