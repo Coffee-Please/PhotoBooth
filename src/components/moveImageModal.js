@@ -43,7 +43,7 @@ const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage
   };
 
   const handleSubmit = () => {
-    ManageItems(method, albumName, field, userId, selectedImage, setSelectedImage);
+    ManageItems(method, albumName, field, userId, selectedImage, setSelectedImage, null, null);
   }
 
   return (

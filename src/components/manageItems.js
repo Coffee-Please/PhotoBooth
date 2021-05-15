@@ -54,9 +54,15 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
         }
 
        else {
-          setSelectedItem('All Images'); // otherwise set album to All Images
+         // If the deletion was of an image
+         if(method == 'delete'){
+           setSelectedItem('All Images'); // set the selected image to empty to close the modal
+         }
+         // otherwise if the method is update
+         if (method == 'update') {
+           setSelectedItem(albumName); // otherwise set album to All Images
+         }
         }
-
       }).catch( (error) => {
         console.log("Error getting documents: ", error);
       });
