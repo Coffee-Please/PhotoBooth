@@ -50,7 +50,7 @@ const ChangeAlbumNameModal = ({ method, field, userId, selectedAlbum, setSelecte
   return (
     // modal
     <>
-        <button className="ui button" onClick={openModal}><BiDotsVerticalRounded /></button>
+        <button className="ui button" id="rename-btn" onClick={openModal}><BiDotsVerticalRounded /></button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
