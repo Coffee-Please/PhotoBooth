@@ -19,7 +19,7 @@ const customStyles = {
 Modal.setAppElement('#root'); // for accessibility, prevents screen readers from reading background content
 
 // function that creates the modal
-const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedItem, setSelectedItem }) => {
+const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedItem, setSelectedItem, selectedAlbum, setSelectedAlbum }) => {
   const [modalIsOpen,setIsOpen] = useState(false);
 
 
@@ -32,7 +32,8 @@ const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedIt
   }
 
   const handleSubmit = () => {
-    ManageItems(method, albumName, field, userId, selectedItem, setSelectedItem);
+    console.log();
+    ManageItems(method, albumName, field, userId, selectedItem, setSelectedItem, selectedAlbum, setSelectedAlbum);
   }
 
   return (

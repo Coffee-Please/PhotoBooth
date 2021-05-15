@@ -1,9 +1,7 @@
 // imports
-import React, { setState, useState } from 'react';
-import { CgTrash } from 'react-icons/cg';
+import React, { useState } from 'react';
 import ManageItems from './manageItems';
 import Modal from 'react-modal';
-import { useSession } from "./../firebase/userProvider";
 
 const customStyles = {
   content : {
@@ -33,7 +31,7 @@ const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage
     setIsOpen(false);
   }
 
-  // Updates values with changes to password fields
+  // Updates values with changes to input fields
   const handleChange = (e) => {
     var value = e.target.value;
     console.log(value);

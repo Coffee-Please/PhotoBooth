@@ -12,7 +12,6 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
   const userId = user.uid;
   var { docs } = useFirestore(`${user.uid}`); // get the collection
   const albumsList = ["All Images"]; // to hold the list of unique album names
-  const field = 'album';
 
   // on click of album name, set it as the selected album
   const handleClick = (event) => {
@@ -30,7 +29,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
       return (
         <div className="list-item">
           {/* delete image button sows when the ablum is selected*/}
-          {selectedAlbum == docs.album && <ConfirmDeleteModal method={'delete'} type={'album'} albumName={null} field={field} userId={userId} selectedItem={selectedAlbum} setSelectedItem={setSelectedAlbum}/>}
+          {selectedAlbum == docs.album && <ConfirmDeleteModal method={'delete'} albumName={null} field={'album'} userId={userId} selectedItem={selectedAlbum} setSelectedItem={setSelectedAlbum}/>}
 
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>

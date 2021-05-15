@@ -29,7 +29,7 @@ const Gallery = () => {
 
             <ImageGrid setSelectedImage={setSelectedImage} selectedAlbum={selectedAlbum} />
 
-            {selectedImage && <ImageModal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
+            {selectedImage && <ImageModal selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
         </div>
 
       </div>

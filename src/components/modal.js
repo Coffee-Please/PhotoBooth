@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 import { CgTrash } from 'react-icons/cg';
 import { useSession } from "./../firebase/userProvider";
 import { photoBoothFirestore } from './../firebase/config';
-import ManageItems from './manageItems';
-import ConfirmDeleteModal from './confirmDeleteModal';
-import Modal from 'react-modal';
 import MoveImageModal from './moveImageModal';
+import ConfirmDeleteModal from './confirmDeleteModal';
+
 
 
 // function that creates the modal
-const ImageModal = ({ selectedImage, setSelectedImage }) => {
+const ImageModal = ({ selectedAlbum, setSelectedAlbum, selectedImage, setSelectedImage }) => {
   const { user } = useSession(); // get the user info
   const userId = user.uid; // set the user id for passing to delete method if needed
+  const field = 'url'; // set the field for the delete to url
 
   // function to close the modal
   const handleClick = (e) => {
@@ -23,17 +23,18 @@ const ImageModal = ({ selectedImage, setSelectedImage }) => {
     }
   }
 
+
   return (
     // modal
     <motion.div className="backdrop" onClick={handleClick} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       // modal image
-      <motion.img src={ selectedImage } alt="" initial={{ y: "-100vh" }} animate={{ y: 0 }}/>
+      <motion.img src={ selectedImage } alt="" initial={{ y: "-100vh" }} animate={{ y: 0 }} />
 
       {/* delete image button */}
-      <ConfirmDeleteModal method={'delete'} type={'image'} albumName={null} field={'url'} userId={userId} selectedItem={selectedImage} setSelectedItem={setSelectedImage}/>
+      <ConfirmDeleteModal method={'delete'} albumName={null} field={'url'} userId={userId} selectedItem={selectedImage} setSelectedItem={setSelectedImage} selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum}/>
 
       {/* change album modal */}
-      <MoveImageModal method={'update'} field={'url'} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>
+      <MoveImageModal method={'update'} field={field} userId={userId} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
 
     </motion.div>
   )
