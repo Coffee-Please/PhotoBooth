@@ -142,6 +142,7 @@ code {
 }
 
 .list-item {
+  display: flex;
   border-bottom: solid 1px black;
   height: fit-content;
 }

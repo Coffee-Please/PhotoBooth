@@ -8,6 +8,13 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
     // references
     const collectionRef = photoBoothFirestore.collection(`${userId}`); // create reference to user's collection in firestore
     const documents = collectionRef.where(field,'==', selectedItem); // set the query field to the field of the selected file
+    const checkAlbum = collectionRef.where('album','==', selectedAlbum); // set the query field to the field of the selected album
+
+//-----------------------------------------------------
+//
+// get the items to update or delete
+//
+//-----------------------------------------------------
 
     // get the documents with the set query
     documents.get().then( (querySnapshot) => {
@@ -28,8 +35,12 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
         console.log("Error getting documents: ", error);
     });
 
-// check if album is empty
-    const checkAlbum = collectionRef.where('album','==', selectedAlbum); // set the query field to the field of the selected file
+//-----------------------------------------------------
+//
+// update the display and check if album is empty
+//
+//-----------------------------------------------------
+
 
     checkAlbum.get().then( (querySnapshot) => {
         // If the deletion was of an image

@@ -29,7 +29,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
       return (
         <div className="list-item">
           {/* delete image button sows when the ablum is selected*/}
-          {selectedAlbum == docs.album && <ConfirmDeleteModal method={'delete'} albumName={null} field={'album'} userId={userId} selectedItem={selectedAlbum} setSelectedItem={setSelectedAlbum}/>}
+          {selectedAlbum == docs.album && <ConfirmDeleteModal method={'delete'} type={'album'} albumName={null} field={'album'} userId={userId} selectedItem={selectedAlbum} setSelectedItem={setSelectedAlbum} selectedAlbum={null} setSelectedAlbum={null} />}
 
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>

@@ -39,7 +39,7 @@ const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedIt
   return (
     // modal
     <>
-        <button className="ui red button" alt="Delete" onClick={ openModal }><CgTrash /></button>
+        <button className="ui red button" id="delete-btn" alt="Delete" onClick={ openModal }><CgTrash /></button>
 
         <Modal
           isOpen={modalIsOpen}
