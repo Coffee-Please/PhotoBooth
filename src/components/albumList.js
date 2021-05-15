@@ -1,10 +1,10 @@
 import React from 'react';
 import useFirestore from './../hooks/useFirestore';
 import { useSession } from "./../firebase/userProvider";
-import ManageItems from './manageItems';
 import ConfirmDeleteModal from './confirmDeleteModal';
 import { CgTrash } from 'react-icons/cg';
-import { BiDotsVerticalRounded } from 'react-icons/bi';
+import ChangeAlbumNameModal from './changeAlbumName';
+
 
 const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
   // hooks
@@ -30,6 +30,9 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
         <div className="list-item">
           {/* delete image button sows when the ablum is selected*/}
           {selectedAlbum == docs.album && <ConfirmDeleteModal method={'delete'} type={'album'} albumName={null} field={'album'} userId={userId} selectedItem={selectedAlbum} setSelectedItem={setSelectedAlbum} selectedAlbum={null} setSelectedAlbum={null} />}
+
+          {/* change album modal */}
+          {selectedAlbum == docs.album && <ChangeAlbumNameModal method={'update'} field={'album'} userId={userId} selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />}
 
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>

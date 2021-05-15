@@ -37,7 +37,7 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
 
 //-----------------------------------------------------
 //
-// update the display and check if album is empty
+// update the display
 //
 //-----------------------------------------------------
 
