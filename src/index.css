@@ -167,6 +167,7 @@ code {
 }
 
 .list-item {
+  display: flex;
   border-bottom: solid 1px black;
   height: fit-content;
   transition: all 0.1s ease-in;
@@ -174,6 +175,14 @@ code {
 
 #delete-btn {
   margin: 5px 10px;
+}
+
+#delete-btn {
+  margin: 5px;
+}
+
+#rename-btn {
+  margin: 5px;
 }
 
 .album-header {
