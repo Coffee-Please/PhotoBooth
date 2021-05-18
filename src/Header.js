@@ -2,6 +2,7 @@ import React from "react";
 import { logout } from "./firebase/auth";
 import { useHistory } from "react-router-dom";
 import { useSession } from "./firebase/userProvider";
+import Logo from "./camera.png";
 
 function Header() {
   //use the route history to route to previous page
@@ -15,15 +16,32 @@ function Header() {
 
   return (
     <header>
-      <h2>PhotoBooth</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          margin: "5px",
+        }}
+      >
+        <div>
+          <img src={Logo} style={{ width: "40px", float: "left" }} />
+          <h2>PhotoBooth</h2>
+        </div>
+        {!!user && (
+          <button className="ui secondary button logout" onClick={logOutUser}>
+            Logout
+          </button>
+        )}
+      </div>
 
       {/* render button only if logged in to page */}
 
-      {!!user && (
+      {/* {!!user && (
         <button className="ui secondary button logout" onClick={logOutUser}>
           LOGOUT
         </button>
-      )}
+      )} */}
     </header>
   );
 }

@@ -37,14 +37,14 @@ function Footer() {
         >
           <FontAwesomeIcon icon={faGoogle} size="2x" />
         </a>
-        <a
-          href="https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+        {/* <a
+          href="https://devcenter.heroku.com/categories/reference"
           target="_blank"
           rel="noreferrer"
           className="youtube social"
         >
-          <FontAwesomeIcon icon={faYoutube} size="2x" />
-        </a>
+          <FontAwesomeIcon icon={farocket} size="2x" />
+        </a> */}
       </div>
     </footer>
   );

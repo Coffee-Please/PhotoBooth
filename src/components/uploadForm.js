@@ -44,7 +44,7 @@ const UploadForm = ({ selectedAlbum, setSelectedAlbum, setAlbumName }) => {
         <div
           className="album-wrapper"
           onChange={changeHandler}
-          style={{ margin: "auto", textAlign: "center", width: "40px" }}
+          // style={{ margin: "auto", textAlign: "center", width: "40px" }}
         >
           <p>+</p>
         </div>
