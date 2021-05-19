@@ -44,6 +44,7 @@ function LogIn(props) {
           <div className="text-container" align="center">
             <div>
               <img className="logo" src={logo} alt="Logo" />
+                <h1>PhotoBooth</h1>
             </div>
           </div>
           <form className="ui form" onSubmit={handleSubmit(onSubmit)}>

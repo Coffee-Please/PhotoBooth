@@ -25,7 +25,7 @@ function Header() {
         }}
       >
         <div>
-          <img src={Logo} style={{ width: "40px", float: "left" }} />
+          <img src={Logo} style={{ width: "40px", float: "left" }} alt="" />
           <h2>PhotoBooth</h2>
         </div>
         {!!user && (

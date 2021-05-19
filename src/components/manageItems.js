@@ -1,5 +1,4 @@
 // imports
-import React from 'react';
 import { photoBoothFirestore } from './../firebase/config';
 
 

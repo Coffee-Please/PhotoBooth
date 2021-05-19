@@ -1,9 +1,8 @@
 // imports
-import React, { setState, useState } from 'react';
+import React, { useState } from 'react';
 import { CgTrash } from 'react-icons/cg';
 import ManageItems from './manageItems';
 import Modal from 'react-modal';
-import { useSession } from "./../firebase/userProvider";
 
 // Styling for the modal
 const customStyles = {

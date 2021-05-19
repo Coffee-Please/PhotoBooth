@@ -4,7 +4,6 @@ import UploadForm from './uploadForm';
 const CreateAlbumForm = ({ setSelectedAlbum }) => {
   // hooks
   const [albumName, setAlbumName] = useState(null); // hook to store errors
-  const [error, setError] = useState(null); // hook to store errors
 
 
   // Functions

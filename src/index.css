@@ -1,5 +1,5 @@
 :root {
-  --primary: #1a2129;
+  --primary: #ff8474;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
@@ -154,7 +154,7 @@ code {
   width: 100%;
   margin: 60px auto 40px auto;
   background-color: white;
-  border-style: solid; */
+  border-style: solid;
   border-radius: 25px;
   box-shadow: 6px 6px 16px 0 rgba(190, 190, 190, 0.6),
     -6px -6px 16px 0 rgba(255, 255, 255, 0.5);

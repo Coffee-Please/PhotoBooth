@@ -2,7 +2,6 @@ import React from "react";
 import useFirestore from "./../hooks/useFirestore";
 import { useSession } from "./../firebase/userProvider";
 import ConfirmDeleteModal from "./confirmDeleteModal";
-import { CgTrash } from "react-icons/cg";
 import ChangeAlbumNameModal from "./changeAlbumName";
 
 const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
