@@ -91,7 +91,7 @@ function Signup(props) {
                 Already have an account? <Link to="/login">Login </Link>
               </p>
               <button className="ui button" type="submit">
-                submit
+                Submit
               </button>
             </div>
           </form>

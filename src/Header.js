@@ -29,7 +29,7 @@ function Header() {
           <h2>PhotoBooth</h2>
         </div>
         {!!user && (
-          <button className="ui secondary button logout" onClick={logOutUser}>
+          <button className="ui inverted basic button logout" onClick={logOutUser}>
             Logout
           </button>
         )}
