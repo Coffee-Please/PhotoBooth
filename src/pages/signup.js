@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { signup } from "../firebase/auth";
 import { Link } from "react-router-dom";
-import logo from "../camera.png";
+import logo from "../logo.png";
 
 
 function Signup(props) {
@@ -40,7 +40,6 @@ function Signup(props) {
           <div className="text-container" align="center">
           <div>
               <img className="logo" src={logo} alt="Logo" />
-              <h1>PhotoBooth</h1>
             </div>
           </div>
           <form

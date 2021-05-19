@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { login } from "../firebase/auth";
 import { Link } from "react-router-dom";
-import logo from "../camera.png";
+import logo from "../logo.png";
 
 //Register her is component and we have to have capital letter for component.
 function LogIn(props) {
@@ -44,7 +44,6 @@ function LogIn(props) {
           <div className="text-container" align="center">
             <div>
               <img className="logo" src={logo} alt="Logo" />
-                <h1>PhotoBooth</h1>
                 <br/>
             </div>
           </div>
