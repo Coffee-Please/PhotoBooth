@@ -36,7 +36,7 @@ function LogIn(props) {
       setLoading(false);
     }
   };
-  //   const formClassName = `ui form ${isLoading ? "loading" : ""}`;
+
   return (
     <div className="login-container ">
       <div className="ui card login-card">
@@ -44,6 +44,7 @@ function LogIn(props) {
           <div className="text-container" align="center">
             <div>
               <img className="logo" src={logo} alt="Logo" />
+                <br/>
             </div>
           </div>
           <form className="ui form" onSubmit={handleSubmit(onSubmit)}>

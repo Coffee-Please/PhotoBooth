@@ -33,8 +33,6 @@ function Signup(props) {
     }
   };
 
-  // const formClassName = `ui form ${isLoading ? "loading" : ""}`;
-
   return (
     <div className="login-container">
       <div className="ui card login-card">
@@ -43,11 +41,10 @@ function Signup(props) {
           <div>
               <img className="logo" src={logo} alt="Logo" />
             </div>
-            {/* <p>Please fill out the form</p> */}
           </div>
           <form
             className="ui form "
-            style={{ margin: "15% 1% 15% 1% " }}
+            style={{ margin: "10% 1% 10% 1% " }}
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="required field ">
@@ -93,7 +90,7 @@ function Signup(props) {
                 Already have an account? <Link to="/login">Login </Link>
               </p>
               <button className="ui button" type="submit">
-                submit
+                Submit
               </button>
             </div>
           </form>

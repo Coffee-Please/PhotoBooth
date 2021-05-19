@@ -1,10 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faYoutube,
-  faFacebook,
   faTwitter,
-  faInstagram,
   faReact,
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
@@ -37,14 +34,6 @@ function Footer() {
         >
           <FontAwesomeIcon icon={faGoogle} size="2x" />
         </a>
-        {/* <a
-          href="https://devcenter.heroku.com/categories/reference"
-          target="_blank"
-          rel="noreferrer"
-          className="youtube social"
-        >
-          <FontAwesomeIcon icon={farocket} size="2x" />
-        </a> */}
       </div>
     </footer>
   );

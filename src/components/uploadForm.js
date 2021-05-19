@@ -30,11 +30,6 @@ const UploadForm = ({ selectedAlbum, setSelectedAlbum, setAlbumName }) => {
     // Select file form
     <form className="uploadForm">
       {/* get input for file upload */}
-      {/* <label className="upload">
-        <input type="file" onChange={changeHandler} />
-        <span>+</span>
-      </label> */}
-
       <label>
         <input
           type="file"

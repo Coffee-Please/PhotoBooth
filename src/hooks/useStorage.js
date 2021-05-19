@@ -36,10 +36,10 @@ const useStorage = (file, selectedAlbum) => {
 
       // check if there is an album
       if (selectedAlbum == undefined) {
-        album = null;
+        album = null; // if not, set to null to be added to "All Images"
       }
       else {
-        album = selectedAlbum;
+        album = selectedAlbum; // otherwise set the album name
       }
 
       // if there is and image, add

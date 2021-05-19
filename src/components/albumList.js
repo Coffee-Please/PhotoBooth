@@ -2,13 +2,14 @@ import React from "react";
 import useFirestore from "./../hooks/useFirestore";
 import { useSession } from "./../firebase/userProvider";
 import ConfirmDeleteModal from "./confirmDeleteModal";
-import { CgTrash } from "react-icons/cg";
 import ChangeAlbumNameModal from "./changeAlbumName";
+import { motion } from 'framer-motion';
+
 
 const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
   // hooks
   const { user } = useSession(); // get the user info
-  const userId = user.uid;
+  const userId = user.uid; // get the user id to pass yo modals
   var { docs } = useFirestore(`${user.uid}`); // get the collection
   const albumsList = ["All Images"]; // to hold the list of unique album names
 
@@ -25,7 +26,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
 
       // display album name
       return (
-        <div className="list-item">
+        <motion.div className="list-item" key={docs.album} initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }}>
           {/* delete image button sows when the ablum is selected*/}
           {selectedAlbum == docs.album && (
             <ConfirmDeleteModal
@@ -52,10 +53,11 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
             />
           )}
 
+          {/* list item with the album title */}
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>
           </div>
-        </div>
+        </motion.div>
       );
     }
   };

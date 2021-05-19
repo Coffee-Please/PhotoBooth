@@ -1,9 +1,7 @@
 // imports
-import React, { setState, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { CgTrash } from "react-icons/cg";
 import { useSession } from "./../firebase/userProvider";
-import { photoBoothFirestore } from "./../firebase/config";
 import MoveImageModal from "./moveImageModal";
 
 import ConfirmDeleteModal from "./confirmDeleteModal";
@@ -35,7 +33,7 @@ const ImageModal = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      // modal image
+      {/* modal image */}
       <motion.img
         src={selectedImage}
         alt=""
