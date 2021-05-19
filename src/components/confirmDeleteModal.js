@@ -32,7 +32,6 @@ const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedIt
   }
 
   const handleSubmit = () => {
-    console.log();
     ManageItems(method, albumName, field, userId, selectedItem, setSelectedItem, selectedAlbum, setSelectedAlbum);
   }
 
