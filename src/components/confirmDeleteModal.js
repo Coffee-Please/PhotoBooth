@@ -5,6 +5,7 @@ import ManageItems from './manageItems';
 import Modal from 'react-modal';
 import { useSession } from "./../firebase/userProvider";
 
+// Styling for the modal
 const customStyles = {
   content : {
     top                   : '50%',
@@ -16,11 +17,11 @@ const customStyles = {
   }
 };
 
-Modal.setAppElement('#root'); // for accessibility, prevents screen readers from reading background content
+Modal.setAppElement('#root'); // for accessibility, prevents screen readers from reading background content by setting what the background is
 
 // function that creates the modal
 const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedItem, setSelectedItem, selectedAlbum, setSelectedAlbum }) => {
-  const [modalIsOpen,setIsOpen] = useState(false);
+  const [modalIsOpen,setIsOpen] = useState(false); // holds modal status
 
 
   function openModal() {
@@ -49,6 +50,7 @@ const ConfirmDeleteModal = ({ method, type, albumName, field, userId, selectedIt
         >
 
           <h2>Delete</h2>
+
           <form>
             <p>Are you sure you want to delete this {type}?</p>
           </form>

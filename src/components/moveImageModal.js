@@ -50,6 +50,7 @@ const MoveImageModal = ({ method, field, userId, selectedImage, setSelectedImage
     // modal
     <>
         <button className="ui button" onClick={openModal}>Change Album to...</button>
+
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}

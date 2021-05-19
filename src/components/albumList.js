@@ -9,7 +9,7 @@ import ChangeAlbumNameModal from './changeAlbumName';
 const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
   // hooks
   const { user } = useSession(); // get the user info
-  const userId = user.uid;
+  const userId = user.uid; // get the user id to pass yo modals
   var { docs } = useFirestore(`${user.uid}`); // get the collection
   const albumsList = ["All Images"]; // to hold the list of unique album names
 
@@ -34,6 +34,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
           {/* change album modal */}
           {selectedAlbum == docs.album && <ChangeAlbumNameModal method={'update'} field={'album'} userId={userId} selectedAlbum={selectedAlbum} setSelectedAlbum={setSelectedAlbum} />}
 
+          {/* list item with the album title */}
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>
           </div>
@@ -44,10 +45,12 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
 
   return (
     <>
+    {/* Album List title */}
     <div className="album-header">
       <h1>Albums</h1>
     </div>
 
+    {/* Album List */}
     <div className="album-list">
       {/* Put the All Images album at the top */}
       <div className="list-item">

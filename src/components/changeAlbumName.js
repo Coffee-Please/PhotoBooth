@@ -20,29 +20,33 @@ Modal.setAppElement('#root'); // for accessibility, prevents screen readers from
 // function that creates the modal
 const ChangeAlbumNameModal = ({ method, field, userId, selectedAlbum, setSelectedAlbum }) => {
 
-  const [newalbumName, setNewAlbumName] = useState(null);
-  const [modalIsOpen,setIsOpen] = useState(false);
+  const [newalbumName, setNewAlbumName] = useState(null); // stores the album name inputted by the user
+  const [modalIsOpen,setIsOpen] = useState(false); // stores the state of the modal
 
 
+  // function to open modal
   function openModal() {
     setIsOpen(true);
   }
 
+  // function to close modal
   function closeModal(){
     setIsOpen(false);
   }
 
   // Updates values with changes to input fields
   const handleChange = (e) => {
-    var value = e.target.value;
+    var value = e.target.value; // get the input value for the inoutted album name
 
+    // if the input is empty, set to the album name to null
     if(value == "") {
       setNewAlbumName(null);
     } else {
-      setNewAlbumName(value);
+      setNewAlbumName(value); // otherwise store the album name
      }
   };
 
+  // function to handle the submission to change the album name; update the album name
   const handleSubmit = () => {
     ManageItems(method, newalbumName, field, userId, selectedAlbum, setSelectedAlbum, null, null);
   }
@@ -50,23 +54,29 @@ const ChangeAlbumNameModal = ({ method, field, userId, selectedAlbum, setSelecte
   return (
     // modal
     <>
-        <button className="ui button" id="rename-btn" onClick={openModal}><BiDotsVerticalRounded /></button>
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Change Album Name"
-        >
+      <button className="ui button" id="rename-btn" onClick={openModal}><BiDotsVerticalRounded /></button>
 
-          <h2>Change Album Name to...</h2>
-          <form>
-            <input type='text' style={{ margin: '50px' }} placeholder="Enter a new album name..." name="newalbumName" value={newalbumName} onChange={handleChange} maxLength="20" required />
-          </form>
+      {/* Modal */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Change Album Name"
+      >
 
-          <button className="ui basic button" onClick={closeModal}>Cancel</button>
-          <button className="ui button" onClick={handleSubmit}>Change</button>
-        </Modal>
-        </>
+        {/* Modal Header */}
+        <h2>Change Album Name to...</h2>
+
+        {/* Modal Input Form */}
+        <form>
+          <input type='text' style={{ margin: '50px' }} placeholder="Enter a new album name..." name="newalbumName" value={newalbumName} onChange={handleChange} maxLength="20" required />
+        </form>
+
+        {/* Modal Buttons */}
+        <button className="ui basic button" onClick={closeModal}>Cancel</button>
+        <button className="ui button" onClick={handleSubmit}>Change</button>
+      </Modal>
+    </>
   )
 }
 

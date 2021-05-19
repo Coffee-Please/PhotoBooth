@@ -37,8 +37,6 @@ code {
   font-size: 2.6rem;
 }
 
-
-
 /* file uplaod button */
 .uploadForm {
   margin: 30px auto 10px;
@@ -145,10 +143,6 @@ code {
   display: flex;
   border-bottom: solid 1px black;
   height: fit-content;
-}
-
-#delete-btn {
-  margin: 5px;
 }
 
 #delete-btn {
