@@ -26,7 +26,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
 
       // display album name
       return (
-        <motion.div className="list-item" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }}>
+        <motion.div className="list-item" key={docs.album} initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }}>
           {/* delete image button sows when the ablum is selected*/}
           {selectedAlbum == docs.album && (
             <ConfirmDeleteModal
