@@ -103,9 +103,7 @@ code {
   .img-grid {
     grid-template-columns: 1fr;
   }
-  /* .album-list {
-    display: none !important;
-  } */
+
   .gallery {
     grid-template-columns: 1fr !important;
   }
@@ -153,15 +151,11 @@ code {
 .list {
   display: flex;
   flex-flow: column;
-  /* height: 100%; */
-
   width: 100%;
   margin: 60px auto 40px auto;
   background-color: white;
-  /* border: #1a2129;
   border-style: solid; */
   border-radius: 25px;
-
   box-shadow: 6px 6px 16px 0 rgba(190, 190, 190, 0.6),
     -6px -6px 16px 0 rgba(255, 255, 255, 0.5);
 }
@@ -244,15 +238,6 @@ code {
   background: var(--primary);
   color: white;
 }
-
-/* footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
-  margin: 10px;
-} */
 
 .social {
   margin: 0 10px;

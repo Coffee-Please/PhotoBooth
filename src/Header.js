@@ -34,14 +34,6 @@ function Header() {
           </button>
         )}
       </div>
-
-      {/* render button only if logged in to page */}
-
-      {/* {!!user && (
-        <button className="ui secondary button logout" onClick={logOutUser}>
-          LOGOUT
-        </button>
-      )} */}
     </header>
   );
 }

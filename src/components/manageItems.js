@@ -27,12 +27,12 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
         }
         // otherwise if the method is update
         if (method == 'update') {
-          doc.ref.update({ album: albumName }); // update the document
+          doc.ref.update({ album: albumName }); // update the document album tag
         }
 
       });
     }).catch((error) => {
-        console.log("Error getting documents: ", error);
+        console.log("Error getting documents: ", error); // catch and log any errors
     });
 
 //-----------------------------------------------------

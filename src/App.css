@@ -48,7 +48,6 @@ header h2 {
 
 .ui.card.login-card {
   width: 450px;
-  /* text-align: center; */
 }
 
 .ui.form input[type="text"],
@@ -63,10 +62,6 @@ header h2 {
   top: 4px;
   right: 15px;
 }
-
-/* .actions {
-  text-align: right;
-} */
 
 .actions button {
   margin-right: 5px;

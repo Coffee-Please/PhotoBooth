@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { login } from "../firebase/auth";
 import { Link } from "react-router-dom";
-import logo from "../logo.png";
+import logo from "../camera.png";
 
 //Register her is component and we have to have capital letter for component.
 function LogIn(props) {
@@ -36,7 +36,7 @@ function LogIn(props) {
       setLoading(false);
     }
   };
-  //   const formClassName = `ui form ${isLoading ? "loading" : ""}`;
+
   return (
     <div className="login-container ">
       <div className="ui card login-card">

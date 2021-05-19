@@ -33,8 +33,6 @@ function Signup(props) {
     }
   };
 
-  // const formClassName = `ui form ${isLoading ? "loading" : ""}`;
-
   return (
     <div className="login-container">
       <div className="ui card login-card">
@@ -43,7 +41,6 @@ function Signup(props) {
           <div>
               <img className="logo" src={logo} alt="Logo" />
             </div>
-            {/* <p>Please fill out the form</p> */}
           </div>
           <form
             className="ui form "

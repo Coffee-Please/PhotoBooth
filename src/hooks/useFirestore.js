@@ -30,7 +30,7 @@ const useFirestore = (collection) => {
   }, [collection])
 
 
-  return { docs };
+  return { docs }; // return the image documents
 }
 
 export default useFirestore;
