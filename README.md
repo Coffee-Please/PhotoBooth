@@ -7,9 +7,8 @@ In addition, users will have the option to create albums and save similar photos
 
 **Tech Stack:**
 - Node.js
-- Express
 - React
 - Firebase
 - OAuth
-- Styled Components (Styling Library for React)
+- Semantic UI
 - Framer Motion
