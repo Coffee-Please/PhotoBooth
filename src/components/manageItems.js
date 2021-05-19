@@ -43,7 +43,7 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
 
 
     checkAlbum.get().then( (querySnapshot) => {
-        // If the deletion was of an image
+        // If the handling was of an image
         if (field == "url") {
         // if the deleted image was the last image in the album
           if (querySnapshot.docs.length == 1) {
@@ -51,30 +51,31 @@ const ManageItems = ( method, albumName, field, userId, selectedItem, setSelecte
               setSelectedAlbum("All Images");
           }
 
-          // otherwise if the method is update
+          // if we were updating the image to another albun
           if (method == 'update') {
             if(albumName){
-              setSelectedAlbum(albumName); // otherwise set album to All Images
+              setSelectedAlbum(albumName); // set album to the album the image was moved to
             } else {
-              setSelectedAlbum("All Images");
+              setSelectedAlbum("All Images"); // otherwise set to All images if the album was not inputted
             }
           }
 
           setSelectedItem(null); // set the selected image to empty to close the modal
         }
 
+        // otherwise were are handling an album
        else {
-         // If the deletion was of an image
+         // If the deletion was of an album
          if(method == 'delete'){
-           setSelectedItem('All Images'); // set the selected image to empty to close the modal
+           setSelectedItem('All Images'); // set the selected album to all images
          }
-         // otherwise if the method is update
+         // otherwise if the method is update (rename the album)
          if (method == 'update') {
-           setSelectedItem(albumName); // otherwise set album to All Images
+           setSelectedItem(albumName); // set the album to the newly named album
          }
         }
       }).catch( (error) => {
-        console.log("Error getting documents: ", error);
+        console.log("Error getting documents: ", error); // catch and log any errors
       });
 }
 
