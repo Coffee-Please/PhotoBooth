@@ -3,6 +3,8 @@ import useFirestore from "./../hooks/useFirestore";
 import { useSession } from "./../firebase/userProvider";
 import ConfirmDeleteModal from "./confirmDeleteModal";
 import ChangeAlbumNameModal from "./changeAlbumName";
+import { motion } from 'framer-motion';
+
 
 const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
   // hooks
@@ -24,7 +26,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
 
       // display album name
       return (
-        <div className="list-item">
+        <motion.div className="list-item" initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }}>
           {/* delete image button sows when the ablum is selected*/}
           {selectedAlbum == docs.album && (
             <ConfirmDeleteModal
@@ -55,7 +57,7 @@ const AlbumList = ({ selectedAlbum, setSelectedAlbum }) => {
           <div className="album-wrapper" onClick={handleClick}>
             <p>{docs.album}</p>
           </div>
-        </div>
+        </motion.div>
       );
     }
   };

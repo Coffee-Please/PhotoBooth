@@ -45,7 +45,7 @@ function Signup(props) {
           </div>
           <form
             className="ui form "
-            style={{ margin: "15% 1% 15% 1% " }}
+            style={{ margin: "10% 1% 10% 1% " }}
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="required field ">
