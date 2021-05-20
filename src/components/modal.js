@@ -43,6 +43,7 @@ const ImageModal = ({
       {/* delete image button */}
       <ConfirmDeleteModal
         method={"delete"}
+        type={"image"}
         albumName={null}
         field={"url"}
         userId={userId}
