@@ -1,9 +1,7 @@
 # PhotoBooth
 
 An online Photo Gallery website where users can login and upload photos. 
-With this application, users can safely save their photos and access them from anywhere. 
-In addition, users will have the option to create albums and save similar photos together.
-
+With this application, users can safely save and organize their photos and access them from anywhere. 
 
 **Tech Stack:**
 - Node.js
@@ -12,8 +10,6 @@ In addition, users will have the option to create albums and save similar photos
 - OAuth
 - Semantic UI
 - Framer Motion
-
-**Preview:**
 
 **Login**
 
