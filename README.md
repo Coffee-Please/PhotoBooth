@@ -12,3 +12,6 @@ In addition, users will have the option to create albums and save similar photos
 - OAuth
 - Semantic UI
 - Framer Motion
+
+**Preview:**
+
