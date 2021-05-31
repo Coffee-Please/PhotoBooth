@@ -30,15 +30,3 @@ In addition, users will have the option to create albums and save similar photos
 **Image Preview**
 
 ![Image Popup](assets/modal.png)
-
-**Move Image**
-
-![Move Image Pop Up](assets/moveImage.png)
-
-**Delete Album**
-
-![Delete Album Pop Up](assets/deleteAlbum.png)
-
-**Rename Album**
-
-![Rename Album Pop Up](assets/renameAlbum.png)
