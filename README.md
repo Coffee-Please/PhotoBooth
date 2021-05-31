@@ -15,3 +15,18 @@ In addition, users will have the option to create albums and save similar photos
 
 **Preview:**
 
+**Login**
+
+**Sign Up**
+
+**Gallery**
+
+**Image Preview**
+
+**Delete Image**
+
+**Move Image**
+
+**Delete Album**
+
+**Rename Album**
